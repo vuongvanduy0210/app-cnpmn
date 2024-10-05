@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "986594924061",
+    "project_id": "smart-home-306f4",
+    "storage_bucket": "smart-home-306f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986594924061:android:881c4ad3e9b297ff83d8f4",
+        "android_client_info": {
+          "package_name": "kit.rtos.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY19AdGYlC8P-9ozp3RLrURJYbKj7MdPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
