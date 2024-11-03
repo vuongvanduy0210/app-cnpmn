@@ -63,7 +63,7 @@ class KitchenFragment : Fragment() {
         )
         recyclerView.adapter = deviceAdapter
         rootController.devices.observe(viewLifecycleOwner) { devices ->
-            refreshDataRealTime(devices)
+//            refreshDataRealTime(devices)
         }
         return view
     }

@@ -1,5 +1,6 @@
 package com.kma_kit.smarthome.ui.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -47,18 +48,21 @@ class DeviceAdapter(
                     }
                 )
 
-                autoSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
-                    device.is_auto = isChecked
-                    if (buttonView.isPressed) {
-                        onAutoSwitchChange(device, isChecked)
-                    }
-                }
-
-                valueSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+                /*valueSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
                     device.value = if (isChecked) 1.0 else 0.0
                     if (buttonView.isPressed) {
                         onValueSwitchChange(device, isChecked)
                     }
+                }*/
+
+                valueSwitch.setOnClickListener {
+                    val isChecked = valueSwitch.isChecked
+                    Log.d("Device Update", "${device.id} $isChecked");
+                    autoSwitch.isChecked = false
+                    // Cập nhật trạng thái của thiết bị
+                    device.value = if (isChecked) 1.0 else 0.0
+                    // Gọi callback để thông báo về bên ngoài
+                    onValueSwitchChange(device, isChecked)
                 }
             }
         }

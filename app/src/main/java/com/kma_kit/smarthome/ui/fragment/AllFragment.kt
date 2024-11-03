@@ -46,7 +46,7 @@ class AllFragment : Fragment() {
         recyclerView.adapter = deviceAdapter
 
         rootController.devices.observe(viewLifecycleOwner) { devices ->
-            refreshDataRealTime(devices)
+//            refreshDataRealTime(devices)
         }
 
         LocalBroadcastManager.getInstance(requireContext())
